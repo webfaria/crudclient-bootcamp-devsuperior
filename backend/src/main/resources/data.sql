@@ -1,0 +1,10 @@
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Maria', '76450277033', 100.10, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 2);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('José', '65020490016', 80.20, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('João', '20393187047', 120.10, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Fernanda', '34933448051', 200.10, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 4);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Marcia', '70433126043', 50.50, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Cleiton', '36662303003', 220.10, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 0);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Bianca', '73081142016', 35.10, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 1);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Marcela', '35845688035', 40.30, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 4);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Kenia', '98486792002', 50.55, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 3);
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Paulo', '08186963030', 300.00, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z', 2);

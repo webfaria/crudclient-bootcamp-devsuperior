@@ -3,6 +3,7 @@ package com.webfaria.crudclient.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,9 +18,12 @@ public class Client implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String name;
 	private String cpf;
 	private Double income;
+
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant birthDate;
 	private Integer children;
 
@@ -27,7 +31,6 @@ public class Client implements Serializable {
 	}
 
 	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
