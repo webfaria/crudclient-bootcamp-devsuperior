@@ -4,12 +4,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.webfaria.crudclient.dto.ClientDTO;
 import com.webfaria.crudclient.entities.Client;
+import com.webfaria.crudclient.exceptions.DatabaseException;
 import com.webfaria.crudclient.exceptions.ResourceNotFoundException;
 import com.webfaria.crudclient.repositories.ClientRepository;
 
@@ -51,8 +56,18 @@ public class ClientService {
 			entity.setName(dto.getName());
 			entity = repository.save(entity);
 			return new ClientDTO(entity);
-		} catch (ResourceNotFoundException e) {
+		} catch (EntityNotFoundException  e) {
 			throw new ResourceNotFoundException("Id not found " + id);
+		}
+	}
+	
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		} catch (EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException("Id not found " + id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Integrity Violation");
 		}
 	}
 }
